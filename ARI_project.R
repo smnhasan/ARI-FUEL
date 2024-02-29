@@ -778,7 +778,7 @@ centroids.df$name <- c('    Barisal',
                        'Rangpur\n','Sylhet')
 
 
-x <- ggplot(q_1, aes(x=long, y=lat)) +geom_polygon(aes(group=group,fill=prev),colour= "lightgrey")+coord_map()+
+x <- ggplot(q_1, aes(x=long, y=lat)) + geom_polygon(aes(group=group,fill=prev),colour= "lightgrey")+coord_map()+
   geom_text(data=centroids.df,aes(label = name, x = Longitude, y = Latitude),color='black',size=3.5)+
   scale_fill_distiller(name='ARI (%)',palette ="YlOrRd", direction=1)+
   theme(legend.text = element_text(size = 8))+
